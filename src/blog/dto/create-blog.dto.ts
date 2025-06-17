@@ -1,4 +1,4 @@
-import { IsString, isString, MinLength } from "class-validator";
+import { IsOptional, IsString, MinLength } from "class-validator";
 
 export class CreateBlogDto {
     @IsString()
@@ -18,4 +18,7 @@ export class CreateBlogDto {
 
     @IsString()
     category: string;
+
+    @IsOptional()
+    date?: Date;
 }
